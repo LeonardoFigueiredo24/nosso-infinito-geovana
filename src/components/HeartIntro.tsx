@@ -4,6 +4,7 @@ import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-moti
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Monogram, Ornament } from './Ornament';
 import { useHeartInteraction } from '@/hooks/useHeartInteraction';
+import { assetPath } from '@/lib/asset-path';
 
 type Particle = { x: number; y: number; dx: number; dy: number; life: number; size: number; };
 export function HeartIntro({ onOpen }: { onOpen: () => void }) {
@@ -95,7 +96,7 @@ export function HeartIntro({ onOpen }: { onOpen: () => void }) {
           animate={opening ? { scale: reduced ? 1 : 7, opacity: 0 } : { scale: active ? 1.04 : 1 }}
           transition={{ duration: opening ? 1.15 : .5 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="petal-heart" src="/art/heart-petals.webp" width={720} height={720} alt="" draggable={false} fetchPriority="high" />
+          <img className="petal-heart" src={assetPath('/art/heart-petals.webp')} width={720} height={720} alt="" draggable={false} fetchPriority="high" />
           {!reduced && ripples.map(ripple => <span key={ripple.id} className="touch-ripple" style={{ left: `${ripple.x}%`, top: `${ripple.y}%` }} />)}
         </motion.button>
         <canvas ref={canvasRef} className="heart-particles" aria-hidden="true" />

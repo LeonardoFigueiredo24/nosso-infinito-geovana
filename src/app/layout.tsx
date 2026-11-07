@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   description: 'Um cantinho feito só para nós. De Leonardo, para Geovana.',
   robots: { index: false, follow: false, nocache: true },
   referrer: 'no-referrer',
-  icons: { icon: '/icon.svg' },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://nosso-infinito.pages.dev'),
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icon.svg` },
   openGraph: { title: 'Uma surpresa para você ❤️', description: 'Um presente para abrir com o coração.', locale: 'pt_BR', type: 'website' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#fff9f5', colorScheme: 'light' };

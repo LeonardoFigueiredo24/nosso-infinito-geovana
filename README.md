@@ -64,11 +64,7 @@ Os players nativos aparecem automaticamente quando `src` está preenchido. Não 
 
 ## QR Code
 
-O endereço reservado para esta versão é:
-
-https://nosso-infinito-lg-071126.compartilhada8642.chatgpt.site
-
-Depois de confirmar o acesso ao site pelo celular de quem vai receber o presente, gere ou atualize o QR com:
+Depois de publicar no Cloudflare Pages, gere ou atualize o QR com o endereço `pages.dev` retornado:
 
 ```sh
 npm run qr -- "https://seu-endereco-final" "../qr-code"
@@ -76,7 +72,7 @@ npm run qr -- "https://seu-endereco-final" "../qr-code"
 
 O script gera PNG de alta resolução, SVG e uma etiqueta HTML para imprimir. Abra `etiqueta.html` no navegador e imprima em escala 100%. Preserve a área branca ao redor do código. Teste o QR impresso em outro celular antes de prender na bolsa.
 
-A hospedagem Sites cria o endereço com acesso privado inicialmente. Alterar o público depende de autorização do proprietário. Um QR apenas codifica o endereço: não altera as permissões do site.
+O QR apenas codifica o endereço: ele não altera as permissões da hospedagem.
 
 ## Estrutura e comportamento
 
@@ -97,7 +93,7 @@ Os tipos `Memory` e `MediaItem` separam os dados da interface. Um backend poder�
 
 ## Publicação
 
-O projeto exporta arquivos estáticos (`output: 'export'`), conforme a [documentação do Next.js](https://nextjs.org/docs/app/guides/static-exports). O identificador da hospedagem Sites está em `.openai/hosting.json`; preserve-o ao atualizar. Não há chaves ou credenciais no projeto. `robots.txt` e metadados pedem aos buscadores que não indexem o presente; isso não substitui controle de acesso.
+O projeto exporta arquivos estáticos (`output: 'export'`), conforme a [documentação do Next.js](https://nextjs.org/docs/app/guides/static-exports). A publicação principal usa Cloudflare Pages; o repositório também contém um fluxo do GitHub Pages. Não há chaves ou credenciais no projeto. `robots.txt` e metadados pedem aos buscadores que não indexem o presente; isso não substitui controle de acesso.
 
 ## Verificação
 

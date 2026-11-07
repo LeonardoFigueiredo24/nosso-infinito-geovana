@@ -5,6 +5,7 @@ out/
 .env*
 !.env.example
 .openai/*.local.*
+.openai/
 .DS_Store
 playwright-report/
 test-results/
