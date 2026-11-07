@@ -1,0 +1,32 @@
+{
+  "name": "nosso-infinito",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "photos": "node scripts/prepare-photos.mjs",
+    "qr": "node scripts/create-qr.mjs"
+  },
+  "dependencies": {
+    "@fontsource/caveat": "latest",
+    "@fontsource/cormorant-garamond": "latest",
+    "@fontsource/dm-sans": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "qrcode": "latest",
+    "sharp": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
